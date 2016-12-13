@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--属性解析：
+                  app:theme:指定Toolbar的样式，包括ActionbarToggle和popuMenu的指示图标颜色
+                  app:popupTheme:指定popupMenu溢出后的样式
+                  app:title:指定Toolbar中主Title的内容-->
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    app:layout_scrollFlags="scroll"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</android.support.v7.widget.Toolbar>

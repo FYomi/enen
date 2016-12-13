@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_1"
+            android:checked="true"
+            android:icon="@drawable/rg_selector"
+            android:title="文件管理" />
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/rg_selector"
+            android:title="修改个人信息" />
+        <item
+            android:id="@+id/navigation_item_3"
+            android:icon="@drawable/rg_selector"
+            android:title="修改密码" />
+    </group>
+
+</menu>

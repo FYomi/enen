@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPink">#F8BBD0</color>
+    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="black">#000000</color>
+    <color name="defaultSwitchOnColor">#9EE3FB</color>
+    <color name="defaultSwitchOnColorOut">#86C3D7</color>
+    <color name="defaultSwitchOffColor">#3C4145</color>
+    <color name="defaultSwitchOffColorOut">#1C1C1C</color>
+    <color name="defaultSpotOnColor">#E1C348</color>
+    <color name="defaultSpotOnColorIn">#FFDF6D</color>
+    <color name="defaultSpotOffColor">#E3E7C7</color>
+    <color name="defaultSpotOffColorIn">#FFFFFF</color>
+</resources>

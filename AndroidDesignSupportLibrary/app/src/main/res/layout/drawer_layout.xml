@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+    <!--第一个位置： 你的内容布局-->
+    <!--你的主界面内容，必须放置在Drawerlayout中的第一个位置
+    根据自己的需求来放置控件，
+    例如：LinearLayout布局或者RelativeLayout布局；也可以是单个控件如TextView等-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/act_homepage_VG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <RadioButton
+                android:id="@+id/act_homepage_rb1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/rg_selector"
+                android:gravity="center_horizontal"
+                android:text="首页"
+                android:textColor="@drawable/rg_text_selector" />
+
+            <RadioButton
+                android:id="@+id/act_homepage_rb2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/rg_selector"
+                android:gravity="center_horizontal"
+                android:text="饺子"
+                android:textColor="@drawable/rg_text_selector" />
+
+            <RadioButton
+                android:id="@+id/act_homepage_rb4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/rg_selector"
+                android:gravity="center_horizontal"
+                android:text="鸡腿"
+                android:textColor="@drawable/rg_text_selector" />
+
+            <RadioButton
+                android:id="@+id/act_homepage_rb5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/rg_selector"
+                android:gravity="center_horizontal"
+                android:text="皮皮虾"
+                android:textColor="@drawable/rg_text_selector" />
+        </RadioGroup>
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/act_homepage_VG"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabBtn"
+                clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="10dp"
+                android:src="@android:drawable/ic_dialog_dialer"
+                app:elevation="6dp"
+                app:fabSize="mini"
+                app:layout_behavior="@string/scale_down_show_behavior"
+                app:pressedTranslationZ="12dp" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!--第二个位置
+    用来放Drawerlyout中的内容，
+    这里使用NavigationView来实现侧滑栏效果
+    必须在build.gradle中添加'com.android.support:design:22.2.0'
+    另外，如果不需要NavigationView效果，
+    也可以放置一个普通布局文件就是一个普通的侧滑栏了-->
+    <!--注意：
+    如果使用NavigationView（其他控件也是一样）的特有属性，需要加上命名空间：
+    xmlns:app="http://schemas.android.com/apk/res-auto"；
+    另外，一定要添加android：layout_gravity="left"属性-->
+    <!--属性解析：
+    app:headerLayout: NavigationView中头部的head部分的布局，是自己实现的
+    app:menu:  指定Navigation中的Menu布局，就是自己写Menu中的按钮，要放在res/menu/文件夹下
+    app：itemTextColor: 用来设置menu item的颜色选择器//其实是菜单里面字的颜色-->
+    <android.support.design.widget.NavigationView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_gravity="start"
+        app:itemTextColor="@drawable/rg_text_selector"
+        app:menu="@menu/drawer">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
